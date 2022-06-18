@@ -14,12 +14,6 @@ const fetchData = () => {
             document.querySelector(`[data-node-name*="${customData}"]`).innerText = data[customData];
           }
         }
-        var sound = new Howl({
-          src: ['birthday.mp3'],
-          autoplay: true,
-          volume: 0.5,
-        });
-        sound.play();
         // Check if the iteration is over
         // Run amimation if so
         if (dataArr.length === dataArr.indexOf(customData) + 1) {
