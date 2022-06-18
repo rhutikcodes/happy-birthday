@@ -20,16 +20,6 @@ const fetchData = () => {
           volume: 0.5,
         });
         sound.play();
-        let control = document.createElement("p");
-        control.innerText = "";
-        document.body.appendChild(control);
-        if (document.all) {
-          control.click();
-        } else {
-          var evObj = document.createEvent('MouseEvents');
-          evObj.initMouseEvent('click', true, true, window, 1, 12, 345, 7, 220, false, false, true, false, 0, null);
-          control.dispatchEvent(evObj);
-        }
         // Check if the iteration is over
         // Run amimation if so
         if (dataArr.length === dataArr.indexOf(customData) + 1) {
