@@ -14,10 +14,12 @@ const fetchData = () => {
             document.querySelector(`[data-node-name*="${customData}"]`).innerText = data[customData];
           }
         }
-        var acousticGuitar = new Pizzicato.Sound('birthday.mp3', function () {
-          // Sound loaded!
-          acousticGuitar.play();
+        var sound = new Howl({
+          src: ['birthday.mp3'],
+          autoplay: true,
+          volume: 0.5,
         });
+        sound.play();
         let control = document.createElement("p");
         control.innerText = "";
         document.body.appendChild(control);
