@@ -14,12 +14,17 @@ const fetchData = () => {
             document.querySelector(`[data-node-name*="${customData}"]`).innerText = data[customData];
           }
         }
-
+        var sound = new Howl({
+          src: ['birthday.mp3'],
+          autoplay: true,
+          volume: 0.5,
+        });
+        sound.play();
         // Check if the iteration is over
         // Run amimation if so
-        if ( dataArr.length === dataArr.indexOf(customData) + 1 ) {
+        if (dataArr.length === dataArr.indexOf(customData) + 1) {
           animationTimeline();
-        } 
+        }
       });
     });
 };
@@ -68,8 +73,7 @@ const animationTimeline = () => {
     })
     .to(
       ".one",
-      0.7,
-      {
+      0.7, {
         opacity: 0,
         y: 10
       },
@@ -77,8 +81,7 @@ const animationTimeline = () => {
     )
     .to(
       ".two",
-      0.7,
-      {
+      0.7, {
         opacity: 0,
         y: 10
       },
@@ -91,8 +94,7 @@ const animationTimeline = () => {
     })
     .to(
       ".three",
-      0.7,
-      {
+      0.7, {
         opacity: 0,
         y: 10
       },
@@ -108,8 +110,7 @@ const animationTimeline = () => {
     })
     .staggerTo(
       ".hbd-chatbox span",
-      0.5,
-      {
+      0.5, {
         visibility: "visible"
       },
       0.05
@@ -119,8 +120,7 @@ const animationTimeline = () => {
     })
     .to(
       ".four",
-      0.5,
-      {
+      0.5, {
         scale: 0.2,
         opacity: 0,
         y: -150
@@ -143,8 +143,7 @@ const animationTimeline = () => {
     .to(".idea-4", 0.7, ideaTextTransLeave, "+=1.5")
     .from(
       ".idea-5",
-      0.7,
-      {
+      0.7, {
         rotationX: 15,
         rotationZ: -10,
         skewY: "-5deg",
@@ -156,8 +155,7 @@ const animationTimeline = () => {
     )
     .to(
       ".idea-5 .smiley",
-      0.7,
-      {
+      0.7, {
         rotation: 90,
         x: 8
       },
@@ -165,8 +163,7 @@ const animationTimeline = () => {
     )
     .to(
       ".idea-5",
-      0.7,
-      {
+      0.7, {
         scale: 0.2,
         opacity: 0
       },
@@ -174,8 +171,7 @@ const animationTimeline = () => {
     )
     .staggerFrom(
       ".idea-6 span",
-      0.8,
-      {
+      0.8, {
         scale: 3,
         opacity: 0,
         rotation: 15,
@@ -185,8 +181,7 @@ const animationTimeline = () => {
     )
     .staggerTo(
       ".idea-6 span",
-      0.8,
-      {
+      0.8, {
         scale: 3,
         opacity: 0,
         rotation: -15,
@@ -197,12 +192,10 @@ const animationTimeline = () => {
     )
     .staggerFromTo(
       ".baloons img",
-      2.5,
-      {
+      2.5, {
         opacity: 0.9,
         y: 1400
-      },
-      {
+      }, {
         opacity: 1,
         y: -1000
       },
@@ -210,8 +203,7 @@ const animationTimeline = () => {
     )
     .from(
       ".lydia-dp",
-      0.5,
-      {
+      0.5, {
         scale: 3.5,
         opacity: 0,
         x: 25,
@@ -228,8 +220,7 @@ const animationTimeline = () => {
     })
     .staggerFrom(
       ".wish-hbd span",
-      0.7,
-      {
+      0.7, {
         opacity: 0,
         y: -50,
         // scale: 0.3,
@@ -241,12 +232,10 @@ const animationTimeline = () => {
     )
     .staggerFromTo(
       ".wish-hbd span",
-      0.7,
-      {
+      0.7, {
         scale: 1.4,
         rotationY: 150
-      },
-      {
+      }, {
         scale: 1,
         rotationY: 0,
         color: "#ff69b4",
@@ -257,8 +246,7 @@ const animationTimeline = () => {
     )
     .from(
       ".wish h5",
-      0.5,
-      {
+      0.5, {
         opacity: 0,
         y: 10,
         skewX: "-15deg"
@@ -267,8 +255,7 @@ const animationTimeline = () => {
     )
     .staggerTo(
       ".eight svg",
-      1.5,
-      {
+      1.5, {
         visibility: "visible",
         opacity: 0,
         scale: 80,
@@ -285,8 +272,7 @@ const animationTimeline = () => {
     .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
     .to(
       ".last-smile",
-      0.5,
-      {
+      0.5, {
         rotation: 90
       },
       "+=1"
