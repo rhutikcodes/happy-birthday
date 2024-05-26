@@ -284,3 +284,53 @@ const animationTimeline = () => {
 
 // Run fetch and animation in sequence
 fetchData();
+
+// Keep only hat animation
+// const fetchData = () => {
+// 	fetch("customize.json")
+// 		.then((data) => data.json())
+// 		.then((data) => {
+// 			dataArr = Object.keys(data);
+// 			dataArr.map((customData) => {
+// 				if (data[customData] !== "") {
+// 					if (customData === "imagePath") {
+// 						document
+// 							.querySelector(`[data-node-name*="${customData}"]`)
+// 							.setAttribute("src", data[customData]);
+// 					} else {
+// 						document.querySelector(
+// 							`[data-node-name*="${customData}"]`,
+// 						).innerText = data[customData];
+// 					}
+// 				}
+// 				// Check if the iteration is over
+// 				// Run animation if so
+// 				if (dataArr.length === dataArr.indexOf(customData) + 1) {
+// 					animationTimeline();
+// 				}
+// 			});
+// 		});
+// };
+
+// // Animation Timeline
+// const animationTimeline = () => {
+// 	const tl = new TimelineMax();
+
+// 	tl.to(".container", 0.1, {
+// 		visibility: "visible",
+// 	}).from(".hat", 0.5, {
+// 		x: -100,
+// 		y: 350,
+// 		rotation: -180,
+// 		opacity: 0,
+// 	});
+
+// 	// Restart Animation on click
+// 	const replyBtn = document.getElementById("replay");
+// 	replyBtn.addEventListener("click", () => {
+// 		tl.restart();
+// 	});
+// };
+
+// // Run fetch and animation in sequence
+// fetchData();
